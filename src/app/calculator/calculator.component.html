@@ -1,0 +1,54 @@
+<div class="calculator">
+
+  <div class="buttons">
+    <div class="logo">
+      <span class="top">
+         <a href="https://www.equalexperts.com" target="_blank" title="EE calculator">
+          <img src="../../assets/images/equal-experts-logo-colour.png" alt="[=] Equal Experts">
+        </a>     
+      </span>
+      <span class="top right">
+        Compute Calculator v1.0
+      </span>
+   </div>
+    <div class="display">
+      <div class="express expression">{{ viewExpression }} </div>
+      <div class="express express-value">{{ computedValue }}</div>
+    </div>
+    <div>
+      <button class="action-button" #escape (click)="onClearClick()">CE</button>
+    </div>
+    <div class="row-item">
+      <button class="button calc" (click)="onAddToMemory()">M+</button>
+      <button class="button calc" (click)="onLoad()">MR</button>
+      <button class="button calc" (click)="onClearMemory()">CM</button>
+      <button class="button operator" #divide (click)="onOperatorClick('/')">÷</button>
+    </div>
+    <div class="row-item">
+      <button class="button calc" #seven (click)="onNumberClick('7')">7</button>
+      <button class="button calc" #eight (click)="onNumberClick('8')">8</button>
+      <button class="button calc" #nine (click)="onNumberClick('9')">9</button>
+      <button class="button operator" #multiply (click)="onOperatorClick('*')">x</button>
+    </div>
+    <div class="row-item">
+      <button class="button calc" #four (click)="onNumberClick('4')">4</button>
+      <button class="button calc" #five (click)="onNumberClick('5')">5</button>
+      <button class="button calc" #six (click)="onNumberClick('6')">6</button>
+      <button class="button operator" #subtract (click)="onOperatorClick('-')">-</button>
+    </div>
+    <div class="row-item">
+      <button class="button calc" #one (click)="onNumberClick('1')">1</button>
+      <button class="button calc" #two (click)="onNumberClick('2')">2</button>
+      <button class="button calc" #three (click)="onNumberClick('3')">3</button>
+      <button class="button operator" #add (click)="onOperatorClick('+')">+</button>
+    </div>
+    <div class="row-item">
+      <button class="button calc" #zero (click)="onNumberClick('0')">0</button>
+      <button class="button calc" #comma (click)="onDecimalClick('.')">&#46;</button>
+      <button class="button calc" #delete (click)="onDelete()">DEL</button>
+      <button class="button operator equal" #calculate (click)="onEqualClick()">=</button>
+    </div>
+    <div class="row-item creative">Created by Fortune Neluswi (2023)</div>
+  </div>
+</div>
+
